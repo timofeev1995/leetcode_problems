@@ -25,6 +25,6 @@ from problems.number_of_island_200.solution import num_islands
         ),
     ]
 )
-def test_friend_circle(grid, expected):
+def test_number_of_island(grid, expected):
     result = num_islands(grid)
     assert result == expected
