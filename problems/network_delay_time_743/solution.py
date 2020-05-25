@@ -8,7 +8,7 @@ def make_nodemap(times: List[List[int]], N: int):
     return nodemap
 
 
-def deikstra(nodemap: Dict[int, List[Tuple[int]]], k: int, n: int):
+def dijkstra(nodemap: Dict[int, List[Tuple[int]]], k: int, n: int):
     visited = [False for _ in range(n)]
     d = [float('inf') for _ in range(n)]
     d[k-1] = 0
