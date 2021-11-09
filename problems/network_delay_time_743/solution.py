@@ -8,7 +8,7 @@ def make_nodemap(times: List[List[int]], N: int):
     return nodemap
 
 
-def deikstra(nodemap: Dict[int, List[Tuple[int]]], k: int, n: int):
+def dijkstra(nodemap: Dict[int, List[Tuple[int]]], k: int, n: int):
     visited = [False for _ in range(n)]
     d = [float('inf') for _ in range(n)]
     d[k-1] = 0
@@ -23,7 +23,7 @@ def deikstra(nodemap: Dict[int, List[Tuple[int]]], k: int, n: int):
 
 def network_delay_time(times: List[List[int]], N: int, K: int) -> int:
     nodemap = make_nodemap(times, N)
-    lens_from_k, visited = deikstra(nodemap, K, N)
+    lens_from_k, visited = dijkstra(nodemap, K, N)
     max_path = max(lens_from_k)
     if not all(visited) or (max_path == float('inf')):
         return -1
