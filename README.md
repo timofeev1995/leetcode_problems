@@ -1,5 +1,6 @@
 ### leetcode_problems
 My solved problems from leetcode. 
+Actually, at some point it became more efficient to solve problems directly on the site leetcode.com directly, so here is only some of the solved problems.
 
 
 #### Repository structure
